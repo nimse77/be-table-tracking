@@ -10,21 +10,21 @@ import java.time.Instant;
 public class WaiterInfo {
 
   @Id
-  @Field("_id")
-  private String waiterId;
+  private String id;
+  private String username;
+  private String password;
   private String restaurantId;
   private String tableId;
-  private String waiterName;
-  private String role;    // WAITER or MANAGER
+  private String waiterName;// WAITER or MANAGER
   private String fcmToken;   // FCM token
   private Instant updatedAt;
 
-  public String getWaiterId() {
-    return waiterId;
+  public String getId() {
+    return id;
   }
 
-  public void setWaiterId(String waiterId) {
-    this.waiterId = waiterId;
+  public void setId(String id) {
+    this.id = id;
   }
 
   public String getRestaurantId() {
@@ -51,14 +51,6 @@ public class WaiterInfo {
     this.waiterName = waiterName;
   }
 
-  public String getRole() {
-    return role;
-  }
-
-  public void setRole(String role) {
-    this.role = role;
-  }
-
   public String getFcmToken() {
     return fcmToken;
   }
@@ -73,5 +65,21 @@ public class WaiterInfo {
 
   public void setUpdatedAt(Instant updatedAt) {
     this.updatedAt = updatedAt;
+  }
+
+  public String getUsername() {
+    return username;
+  }
+
+  public void setUsername(String username) {
+    this.username = username;
+  }
+
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
   }
 }

@@ -17,7 +17,7 @@ public class GenerateQRService {
              String restaurantId,
              String tableId) throws Exception {
 
-        String baseUrl = "https://3.110.121.122/location-check";
+        String baseUrl = "https://3.110.160.235/location-check";
         String data = String.format("%s/%s/%s", baseUrl, restaurantId, tableId);
 
         ByteArrayOutputStream stream = QRCode.from(data)

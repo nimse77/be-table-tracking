@@ -12,7 +12,7 @@ public class WaiterInfoService {
     private WaiterInfoRepository infoRepository;
 
     public String saveToken(WaiterInfo waiterInfo) {
-        WaiterInfo response = infoRepository.findByWaiterId(waiterInfo.getWaiterId()).orElse(null);
+        WaiterInfo response = infoRepository.findByUsername(waiterInfo.getUsername()).orElse(null);
 
         if (response != null) {
             response.setFcmToken(waiterInfo.getFcmToken());

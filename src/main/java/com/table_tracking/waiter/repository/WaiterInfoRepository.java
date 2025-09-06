@@ -10,7 +10,7 @@ import java.util.Optional;
 public interface WaiterInfoRepository extends MongoRepository<WaiterInfo,String> {
 
 
-    public Optional<WaiterInfo> findByUsername(String waiterId);
+    Optional<WaiterInfo> findByUsername(String username);
 
     public Optional<WaiterInfo> findByTableIdAndRestaurantId(String tableId,String restaurantId);
 }

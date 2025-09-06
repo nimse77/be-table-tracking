@@ -15,6 +15,12 @@ public class WaiterInfoController {
     @Autowired
     private WaiterInfoService waiterInfoService;
 
+    @GetMapping("/login/{username}")
+    public ResponseEntity<?> login(@PathVariable String username) {
+       return waiterInfoService.login(username);
+
+    }
+
     @PostMapping("/save")
     public ResponseEntity<Map<String, String>> save(@RequestBody WaiterInfo waiterInfo) {
         String message = waiterInfoService.saveToken(waiterInfo);

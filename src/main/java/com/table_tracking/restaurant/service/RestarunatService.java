@@ -32,6 +32,4 @@ public class RestarunatService {
                     return restaruantRepository.save(existing);
                 }).orElseThrow(() -> new RuntimeException("Restaurant not found"));
     }
-
-
 }
